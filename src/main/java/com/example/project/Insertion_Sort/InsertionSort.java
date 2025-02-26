@@ -8,6 +8,10 @@ public class InsertionSort {
 
     // PART A. implementing insertion sort
     public static int[] insertionSort(int[] elements) {
+        int start = 1;
+        for (int i = start; i < elements.length; i++) {
+            if (elements[i + 1] < )
+        }
         return elements;
     }
 

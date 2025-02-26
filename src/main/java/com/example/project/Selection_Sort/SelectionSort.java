@@ -8,14 +8,38 @@ public class SelectionSort {
 
     // PART A. implementing selection sort
     public static int[] selectionSort(int[] elements) {
-       
+       for (int i = 0; i < elements.length; i++) {
+            int min = elements[i]; 
+            int minIdx = i;
+            for (int j = i; j < elements.length; j++) {
+                if (elements[j] < min) {
+                    min = elements[j];
+                    minIdx = j;
+                }
+            }
+            int temp = elements[i];
+            elements[i] = min;
+            elements[minIdx] = temp;
+        }
         return elements;
     }
 
 
     // PART B. sorting a 1000-word list
     public static ArrayList<String> selectionSortWordList(ArrayList<String> words) {
-      
+        for (int i = 0; i < words.size(); i++) {
+            String min = words.get(i); 
+            int minIdx = i;
+            for (int j = i; j < words.size(); j++) {
+                if (words.get(j).compareTo(min) < 0) {
+                    min = words.get(j);
+                    minIdx = j;
+                }
+            }
+            String temp = words.get(minIdx);
+            words.set(i, min);
+            words.set(minIdx, temp);
+        }
         return words;
     }
 
